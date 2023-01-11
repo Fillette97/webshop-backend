@@ -18,6 +18,16 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<groupId>com.okta.spring</groupId>
+			<artifactId>okta-spring-boot-starter</artifactId>
+			<version>2.1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>com.autonomousapps.dependency-analysis</groupId>
+			<artifactId>com.autonomousapps.dependency-analysis.gradle.plugin</artifactId>
+			<version>1.18.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
@@ -49,10 +59,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${parent.version}</version>
 				<configuration>
 					<excludes>
 						<exclude>
-							<groupId>org.projectlombok</groupId>
+							<groupId>org.project-lombok</groupId>
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>

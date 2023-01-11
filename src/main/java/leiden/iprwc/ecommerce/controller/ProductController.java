@@ -18,7 +18,7 @@ public class ProductController {
         productService.delete(product_id);
     }
 
-    //creating put mapping that updates the book detail
+    //creating put mapping that updates the product detail
     @PutMapping("/update-student/")
     private Product update(@RequestBody Product product)
     {
