@@ -29,4 +29,8 @@ public class ProductService {
     {
         productRepository.save(product);
     }
+
+    public Iterable<Product> findAll() {
+        return productRepository.findAll();
+    }
 }
