@@ -27,6 +27,7 @@ public class ProductService {
     //saving a specific record by using the method save() of CrudRepository
     public void saveOrUpdate(Product product)
     {
+        System.out.println(product);
         productRepository.save(product);
     }
 
