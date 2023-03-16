@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("https://webshop-frontend-ivory.vercel.app")
+
 @RestController
 @RequestMapping("/api/products/")
 public class ProductController {
