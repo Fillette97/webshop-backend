@@ -1,37 +1,10 @@
 package leiden.iprwc.ecommerce.service;
 
-import leiden.iprwc.ecommerce.dao.ProductRepository;
 import leiden.iprwc.ecommerce.entity.Product;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
-public class ProductService {
-    @Autowired
-    ProductRepository productRepository;
-//    public boolean updateProduct(Product product){
-//        return productRepository.updateProduct(product);
-//    }
+public interface ProductService {
 
-    public void delete(Long id)
-    {
-        productRepository.deleteById(id);
-    }
+    void delete(Long product_id);
 
-    //updating a record
-    public void update(Product product, Long id)
-    {
-        productRepository.save(product);
-    }
-
-    //saving a specific record by using the method save() of CrudRepository
-    public void saveOrUpdate(Product product)
-    {
-        System.out.println(product);
-        productRepository.save(product);
-    }
-
-    public Iterable<Product> findAll() {
-        return productRepository.findAll();
-    }
+    void saveOrUpdate(Product product);
 }
