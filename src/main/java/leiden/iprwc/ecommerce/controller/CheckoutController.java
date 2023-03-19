@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.data.repository.init.ResourceReader.Type.JSON;
 
-@CrossOrigin("http://localhost:4200")
+//@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("/api/checkout")
 public class CheckoutController {

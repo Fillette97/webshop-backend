@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
-@CrossOrigin("https://webshop-frontend-ivory.vercel.app")
-
+//@CrossOrigin("https://webshop-frontend-ivory.vercel.app","http://localhost:4200")
+@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("/api/products/")
 public class ProductController {
