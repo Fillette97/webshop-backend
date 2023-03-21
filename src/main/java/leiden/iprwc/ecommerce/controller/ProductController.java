@@ -6,7 +6,6 @@ import leiden.iprwc.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin("https://webshop-frontend-ivory.vercel.app")
 @RestController
 @RequestMapping("/api/products/")
 public class ProductController {
