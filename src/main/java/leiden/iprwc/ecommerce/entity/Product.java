@@ -9,13 +9,12 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.Optional;
 
 @Entity
 @Table(name="product")
 @Data
-
 public class Product {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -141,5 +140,8 @@ public class Product {
 
     public void setLastUpdated(Date lastUpdated) {
         this.lastUpdated = lastUpdated;
+    }
+
+    public void setCategory(Optional<ProductCategory> byId) {
     }
 }
