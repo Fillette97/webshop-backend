@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@RequestMapping("api/orders")
+//@RequestMapping("api/orders")
 @RestController
 public class OrderController {
 
@@ -20,16 +20,16 @@ public class OrderController {
     @Autowired
     private CustomerRepository customerRepository;
 
-    @GetMapping("findByCustomerEmail")
-    public List<Order> findByEmail(@RequestParam String email) {
-        List<Customer> customers = customerRepository.findByEmail(email);
-        List<Order> allOrders = new ArrayList<>();
-        for (Customer c : customers) {
-            Order order = orderRepository.findOrderByCustomer(c);
-            allOrders.add(order);
-        }
-        return allOrders;
-    }
+//    @GetMapping("search/findByCustomerEmail")
+//    public List<Order> findByEmail(@RequestParam String email) {
+//        List<Customer> customers = customerRepository.findByEmail(email);
+//        List<Order> allOrders = new ArrayList<>();
+//        for (Customer c : customers) {
+//            Order order = orderRepository.findOrderByCustomer(c);
+//            allOrders.add(order);
+//        }
+//        return allOrders;
+//    }
 
 
 }

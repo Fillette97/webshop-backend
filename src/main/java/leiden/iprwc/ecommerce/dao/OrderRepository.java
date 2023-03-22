@@ -13,10 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 
-//@RepositoryRestResource
-@Repository
+@RepositoryRestResource
 public interface OrderRepository extends JpaRepository<Order, Long> {
-//    Page<Order> findByCustomerEmail(@Param("email")String email, Pageable pageable);
+    Page<Order> findByCustomerEmail(@Param("email")String email, Pageable pageable);
 
-    Order findOrderByCustomer(Customer customer);
+//    Order findOrderByCustomer(Customer customer);
 }
