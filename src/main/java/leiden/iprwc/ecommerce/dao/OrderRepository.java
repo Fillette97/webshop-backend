@@ -13,12 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 
-//@Repository
-@RepositoryRestResource
-@RequestMapping(value = "/api/orders/search",produces="application/json")
-public interface OrderRepository  extends JpaRepository<Order, Long> {
-    Page<Order> findByCustomerEmail(@Param("email")String email, Pageable pageable);
+//@RepositoryRestResource
+@Repository
+public interface OrderRepository extends JpaRepository<Order, Long> {
+//    Page<Order> findByCustomerEmail(@Param("email")String email, Pageable pageable);
 
-
-    Order findByCustomer(Customer customer);
+    Order findOrderByCustomer(Customer customer);
 }

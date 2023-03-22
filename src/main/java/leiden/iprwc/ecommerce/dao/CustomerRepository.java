@@ -2,11 +2,12 @@ package leiden.iprwc.ecommerce.dao;
 
 import leiden.iprwc.ecommerce.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
-public interface CustomerRepository extends JpaRepository<Customer, Long> {
-    List<Customer> findCustomersByEmail(String email);
+@Repository
+public interface CustomerRepository extends JpaRepository<Customer, String> {
+    List<Customer> findByEmail(String email);
 
 
 }
