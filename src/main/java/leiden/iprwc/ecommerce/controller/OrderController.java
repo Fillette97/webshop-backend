@@ -13,15 +13,7 @@ import java.util.List;
 @RequestMapping("api/orders")
 @RestController
 public class OrderController {
-    //
-//    @Autowired
-//    private OrderService orderService;
-//
-//    @GetMapping("/customer/{email}")
-//    @ResponseBody
-//    public List<JsonNode> getOrdersForCustomerEmail(@PathVariable String email) throws JsonProcessingException {
-//        return orderService.getOrdersForCustomerEmail(email);
-//    }
+
     @Autowired
     private OrderRepository orderRepository;
 
