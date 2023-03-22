@@ -1,33 +1,21 @@
 package leiden.iprwc.ecommerce.controller;
 
 import leiden.iprwc.ecommerce.dao.ProductCategoryRepository;
-import leiden.iprwc.ecommerce.dao.ProductRepository;
 import leiden.iprwc.ecommerce.entity.Product;
 import leiden.iprwc.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
-import java.security.Principal;
-
-@CrossOrigin("https://webshop-frontend-ivory.vercel.app")
 
 @RestController
 @RequestMapping("/api/products/")
 public class ProductController {
-    @Autowired
-    ProductService productService;
 
     @Autowired
-    ProductCategoryRepository productCategoryRepository;
+    private ProductService productService;
 
-    @GetMapping("admin-panel/test")
-    @PreAuthorize("hasAuthority('Admin_product_editor')")
-    private void testAdminPanel(Principal principal) {
-        System.out.println( "Hi "+ principal.getName());
-    }
+    @Autowired
+    private ProductCategoryRepository productCategoryRepository;
 
-//    @PreAuthorize("hasAuthority('Admin_product_editor')")
     @DeleteMapping("admin-panel/productId/{productid}")
     private void deleteProduct(@PathVariable("productid") Long product_id) {
         productService.delete(product_id);
