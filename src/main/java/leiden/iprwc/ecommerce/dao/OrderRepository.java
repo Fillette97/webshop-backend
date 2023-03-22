@@ -15,7 +15,7 @@ import java.util.List;
 
 //@Repository
 @RepositoryRestResource
-@RequestMapping(produces="application/json")
+@RequestMapping(value = "/api/orders/search",produces="application/json")
 public interface OrderRepository  extends JpaRepository<Order, Long> {
     Page<Order> findByCustomerEmail(@Param("email")String email, Pageable pageable);
 
