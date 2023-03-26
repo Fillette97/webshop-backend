@@ -17,5 +17,5 @@ import java.util.List;
 public interface OrderRepository extends JpaRepository<Order, Long> {
     Page<Order> findByCustomerEmail(@Param("email")String email, Pageable pageable);
 
-//    Order findOrderByCustomer(Customer customer);
+
 }
